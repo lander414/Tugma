@@ -99,3 +99,10 @@ function UpdateVideo($userid,$ext){
   mysqli_query($mysqli,$query);
   mysqli_close($mysqli);
 }
+function DefaultVideoByUserId($userid){
+  include("../db/database.php");
+  $query ="INSERT INTO video (userid) VALUES($userid)";
+  mysqli_query($mysqli,$query);
+  mysqli_close($mysqli);
+}
+
