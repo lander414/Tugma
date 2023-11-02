@@ -4,7 +4,9 @@ if(!empty($_GET["un"])){
   $user = GetUserByUsername($_GET["un"]);
   $profilephoto = GetProfilePhotoByUserId($user["userid"]);
   $bgphoto = GetBgPhotoByUserId($user["userid"]);
+  $video = GetVideoByUserId($user["userid"]);
 }
+print_r($video);
 
 
 echo'src="../backgroundphoto/'.$profilephoto["userid"].'.'.$profilephoto["extension"].'';
@@ -34,12 +36,18 @@ echo'src="../backgroundphoto/'.$profilephoto["userid"].'.'.$profilephoto["extens
               ?>
           <p class="display-name"><?php echo$user["displayName_"]; ?></p>
           <p class="username"><?php echo"@".$user["username_"]; ?></p>
+          <a href="../logic/upload.php" class="edit-profile-button">Edit Profile</a>
         </div>
          <div class="bio-container">
           <p class="bio"><?php echo$user["bio_"]; ?></p>
          </div>
       </div>
     </div>
+
+
+    <video class="video-container" width="300" height="400" controls>
+    <source src="../videos/<?php echo $video["userid"].".".$video["extension"];?>" type="video/mp4">
+    </video>  
 
 
 </main>
