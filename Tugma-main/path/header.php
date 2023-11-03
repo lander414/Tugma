@@ -8,7 +8,11 @@ include("../logic/query.php");
 $user = GetUserByUserId($_SESSION["userid"]);
 $profilephoto = GetProfilePhotoByUserId($user["userid"]);
 $bgphoto = GetBgPhotoByUserId($user["userid"]);
+$video = GetVideoByUserId($user["userid"]);
+
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
