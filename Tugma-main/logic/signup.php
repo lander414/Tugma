@@ -22,6 +22,7 @@ if(mysqli_query($mysqli,$query)){
 $user =GetUserByUsername($username);
 DefaultProfilePhotoByUserid($user["userid"]);
 DefaultBgPhotoByUserId($user["userid"]);
+DefaultVideoByUserId($user["userid"]);
   header("location: ../path/start.php");
 }else{
   echo"error: ".mysqli_error($mysqli);

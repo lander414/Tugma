@@ -99,7 +99,10 @@ function UpdateVideo($userid,$ext){
   mysqli_query($mysqli,$query);
   mysqli_close($mysqli);
 }
+//<<<<<<< main
 
+//=======
+// main
 function DefaultVideoByUserId($userid){
   include("../db/database.php");
   $query ="INSERT INTO video (userid) VALUES($userid)";
@@ -107,6 +110,7 @@ function DefaultVideoByUserId($userid){
   mysqli_close($mysqli);
 }
 
+//<<<<<<< main
 function GetVideoByUserId($userid){
   include("../db/database.php");
   $query ="SELECT * FROM video WHERE userid =$userid";
@@ -114,3 +118,5 @@ function GetVideoByUserId($userid){
   mysqli_close($mysqli);
   return  mysqli_fetch_assoc($result);
 }
+//=======
+//>>>>>>> main
