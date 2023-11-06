@@ -37,6 +37,11 @@ echo'src="../backgroundphoto/'.$profilephoto["userid"].'.'.$profilephoto["extens
           <p class="display-name"><?php echo$user["displayName_"]; ?></p>
           <p class="username"><?php echo"@".$user["username_"]; ?></p>
           <a href="../logic/upload.php" class="edit-profile-button">Edit Profile</a>
+          
+          <br>
+          <br>
+          <a href="../logic/rate.php" class="edit-profile-button">Rate me!</a>
+
         </div>
          <div class="bio-container">
           <p class="bio"><?php echo$user["bio_"]; ?></p>
