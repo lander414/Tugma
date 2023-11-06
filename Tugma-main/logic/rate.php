@@ -1,4 +1,24 @@
 <?phpinclude("../db/database.php");
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $item_id = 1; // Change this to the actual item ID you're rating.
+    $rating = $_POST["rating"];
+    $userid = 1; // Change this to the actual user ID or use a session variable for user identification.
+
+    // Perform input validation here if needed.
+
+    // Insert the rating into the database.
+    $sql = "INSERT INTO ratings (item_id, rating, userid) VALUES ('$item_id', '$rating', '$userid')";
+
+    if (mysqli_query($mysqli, $sql)) {
+        echo "Rating submitted successfully!";
+    } else {
+        echo "Error submitting rating: " . mysqli_error($mysqli);
+    }
+    
+}
+
+
+mysqli_close($mysqli);
 ?>
 
 
