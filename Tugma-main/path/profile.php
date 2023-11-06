@@ -6,10 +6,8 @@ if(!empty($_GET["un"])){
   $bgphoto = GetBgPhotoByUserId($user["userid"]);
   $video = GetVideoByUserId($user["userid"]);
 }
-print_r($video);
 
 
-echo'src="../backgroundphoto/'.$profilephoto["userid"].'.'.$profilephoto["extension"].'';
 
 ?>
 <link rel="stylesheet" href="../style/profile.css?v=<?php echo time(); ?>">
