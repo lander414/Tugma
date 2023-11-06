@@ -12,6 +12,9 @@ $users = GetAllUserProfile();
 
   <?php
     foreach ($users as $user) {
+      if ($user["userid"]=== $_SESSION["userid"]){
+        continue;
+      }
       $profilephoto = GetProfilePhotoByUserId($user["userid"]);
       $bgphoto = GetBgPhotoByUserId($user["userid"]);
    
