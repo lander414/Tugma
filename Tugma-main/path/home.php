@@ -5,7 +5,7 @@ include("header.php");
 <style>
   .profile-photo {
     border-radius: 50%;
-    width: 50px;  /* Adjust the size as needed */
+    width: 50px;  
     height: 50px;
   }
 </style>
@@ -24,7 +24,7 @@ if ($mysqli->connect_error) {
 
 $user_id = $_SESSION['userid']; 
 
-// Handle post creation, comment creation, post deletion, comment deletion (your existing code)
+
 
 // Fetch all posts from all users
 $sql = "SELECT posts.post_id, posts.post_content, users.userid, users.username_, profilephoto.extension, profilephoto.status
