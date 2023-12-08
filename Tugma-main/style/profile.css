@@ -1,0 +1,152 @@
+/* Default styles for larger screens */
+.profile-container {
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+  height: 23em;
+  background-color: var(--background-color);
+  position: relative;
+  border-radius: .5em;
+  border-bottom: 1px solid var(--font-color);
+  box-shadow: 0 0 1px var(--font-color);
+}
+
+.bg-photo {
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+}
+
+.basic-info {
+  display: grid;
+  grid-template-columns: 8em 10px 1fr;
+}
+
+.profile-container .profile-photo {
+  width: 8em;
+  height: 8em;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--background-color);
+  box-shadow: 0 0 2px var(--font-color);
+}
+
+.display-name {
+  position: relative;
+  left: 1em;
+  top: 1em;
+  font-size: 2em;
+  color: var(--font-color);
+}
+
+.username {
+  position: relative;
+  left: 1.5em;
+  top: 5em;
+  font-size: 1em;
+  color: rgb(119, 119, 119);
+}
+
+.bio-container {
+  width: 100%;
+}
+
+.bio {
+  color: var(--font-color);
+  word-wrap: break-word;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.profile-container-2 {
+  position: absolute;
+  top: 7.5em;
+  left: 2em;
+}
+
+.video-container {
+  position: absolute;
+  left: 15em;
+  border-radius: .5em;
+}
+
+.artist-rate {
+  font-family: var(--poppins-font);
+  position: relative;
+  top: -4em;
+  left: 20em;
+}
+
+.rate-me {
+  background-color: rgb(75, 83, 90);
+  position: absolute;
+  right: 15em;
+  width: 13em;
+  padding: 1em;
+  text-align: center;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+
+
+@media only screen 
+and (device-width: 430px) 
+and (device-height: 932px) 
+and (-webkit-device-pixel-ratio: 3)
+and (orientation: portrait) {
+
+  .profile-container{
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    height: 15em; 
+    background-color: var(--background-color);
+    position: relative;
+    border-radius: .5em;
+    border-bottom: 1px solid var(--font-color);
+    box-shadow: 0 0 1px var(--font-color);
+  }
+
+  .profile-container .profile-photo{
+    position: absolute;
+    top: -1em;
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+    object-fit: cover;  
+    border: 3px solid var(--background-color);
+    box-shadow: 0 0 2px var(--font-color);
+  }
+
+  .artist-rate{
+    font-family: var(--poppins-font);
+    position: absolute;
+    top: 4.5em;
+    left: 0;
+  }
+  .display-name{
+    position: absolute;
+    left: 5.5em;
+    top: 1em;
+    font-size: 1em;
+    color: var(--font-color);
+  }
+  .username{
+    display: none;
+  }
+  .bio-container{
+    display: none;
+  }
+
+  .video-container{
+    left: 7.3em;
+  }
+  .rate-me{
+    top: 45em;
+    left: 6em;
+  }
+  
+}
